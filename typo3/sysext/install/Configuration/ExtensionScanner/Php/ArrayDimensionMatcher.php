@@ -448,11 +448,13 @@ return [
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'SC_OPTIONS\'][\'recordlist/Modules/Recordlist/index.php\'][\'drawHeaderHook\']' => [
         'restFiles' => [
             'Deprecation-92062-MigrateRecordListControllerHooksToAnPSR-14Event.rst',
+            'Breaking-96107-DeprecatedFunctionalityRemoved.rst',
         ],
     ],
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'SC_OPTIONS\'][\'recordlist/Modules/Recordlist/index.php\'][\'drawFooterHook\']' => [
         'restFiles' => [
             'Deprecation-92062-MigrateRecordListControllerHooksToAnPSR-14Event.rst',
+            'Breaking-96107-DeprecatedFunctionalityRemoved.rst',
         ],
     ],
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'BE\'][\'lockBeUserToDBmounts\']' => [
@@ -507,6 +509,7 @@ return [
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'SC_OPTIONS\'][\'fileList\'][\'editIconsHook\']' => [
         'restFiles' => [
             'Deprecation-95077-FilelistEditIconsHook.rst',
+            'Breaking-96107-DeprecatedFunctionalityRemoved.rst',
         ],
     ],
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'SC_OPTIONS\'][\'FileDumpEID.php\'][\'checkFileAccess\']' => [
@@ -518,11 +521,13 @@ return [
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'SC_OPTIONS\'][\'t3lib/class.t3lib_extfilefunc.php\'][\'processData\']' => [
         'restFiles' => [
             'Deprecation-95089-ExtendedFileUtilityProcessDataHook.rst',
+            'Breaking-96107-DeprecatedFunctionalityRemoved.rst',
         ],
     ],
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'SC_OPTIONS\'][\'additionalBackendItems\'][\'cacheActions\']' => [
         'restFiles' => [
             'Deprecation-95083-BackendToolbarCacheActionsHook.rst',
+            'Breaking-96107-DeprecatedFunctionalityRemoved.rst',
         ],
     ],
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'SC_OPTIONS\'][\'typo3/class.db_list_extra.inc\'][\'actions\']' => [
@@ -540,6 +545,7 @@ return [
     '$GLOBALS[\'TBE_MODULES_EXT\'][\'xMOD_db_new_content_el\'][\'addElClasses\']' => [
         'restFiles' => [
             'Deprecation-95343-LegacyHookForNewContentElementWizard.rst',
+            'Breaking-96107-DeprecatedFunctionalityRemoved.rst',
         ],
     ],
     '$GLOBALS[\'TYPO3_CONF_VARS\'][\'BE\'][\'toolbarItems\']' => [

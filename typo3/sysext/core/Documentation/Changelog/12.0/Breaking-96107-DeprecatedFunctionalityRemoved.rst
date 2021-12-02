@@ -35,8 +35,11 @@ The following PHP classes that have previously been marked as deprecated for v11
 
 The following PHP interfaces that have previously been marked as deprecated for v11 and were now removed:
 
+- :php:`\TYPO3\CMS\Backend\Toolbar\ClearCacheActionsHookInterface`
 - :php:`\TYPO3\CMS\Core\Resource\Hook\FileDumpEIDHookInterface`
+- :php:`\TYPO3\CMS\Core\Utility\File\ExtendedFileUtilityProcessDataHookInterface`
 - :php:`\TYPO3\CMS\Extbase\Mvc\View\ViewInterface`
+- :php:`\TYPO3\CMS\Filelist\FileListEditIconHookInterface'`
 - :php:`\TYPO3\CMS\Recordlist\RecordList\RecordListHookInterface`
 
 The following PHP class aliases that have previously been marked as deprecated for v11 and were now removed:
@@ -94,6 +97,7 @@ The following PHP static class methods that have previously been marked as depre
 
 The following methods changed signature according to previous deprecations in v11 at the end of the argument list:
 
+- :php:`\TYPO3\CMS\Core\Core\ApplicationInterface->run` (argument 1 is removed)
 - :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->ATagParams` (argument 2 is removed)
 
 The following methods changed signature according to previous deprecations in v11 and are now type hinted:
@@ -148,7 +152,8 @@ The following constants have been dropped:
 
 The following class constants have been dropped:
 
-- :php:`\Full\Class\Name::CONSTANT_NAME`
+- :php:`\TYPO3\CMS\Core\Versioning\VersionState::NEW_PLACEHOLDER_VERSION`
+- :php:`\TYPO3\CMS\Core\Versioning\VersionState::MOVE_PLACEHOLDER`
 
 The following global option handling have been dropped and are ignored:
 
@@ -160,10 +165,16 @@ The following global variables have been removed:
 
 The following hooks have been removed:
 
+- :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['additionalBackendItems']['cacheActions']`
 - :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']`
+- :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['fileList']['editIconsHook']`
+- :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['recordlist/Modules/Recordlist/index.php']['drawHeaderHook']`
+- :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['recordlist/Modules/Recordlist/index.php']['drawFooterHook']`
+- :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_extfilefunc.php']['processData']`
 - :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/browse_links.php']['browserRendering']`
 - :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/class.db_list_extra.inc']['actions']`
 - :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/classes/class.frontendedit.php']`
+- :php:`$GLOBALS['TBE_MODULES_EXT']['xMOD_db_new_content_el']['addElClasses']`
 
 The following single field configurations have been removed from TCA:
 
@@ -212,6 +223,19 @@ The following module configuration have been removed:
 - :php:`navFrameScript`
 - :php:`navFrameScriptParam`
 - :php:`navigationFrameModule` (Extbase)
+
+The following command line options have been removed:
+
+- :shell:`impexp:export --includeRelated`
+- :shell:`impexp:export --includeStatic`
+- :shell:`impexp:export --excludeDisabledRecords`
+- :shell:`impexp:export --excludeHtmlCss`
+- :shell:`impexp:export --saveFilesOutsideExportFile`
+- :shell:`impexp:import --updateRecords`
+- :shell:`impexp:import --ignorePid`
+- :shell:`impexp:import --forceUid`
+- :shell:`impexp:import --importMode`
+- :shell:`impexp:import --enableLog`
 
 Impact
 ======
