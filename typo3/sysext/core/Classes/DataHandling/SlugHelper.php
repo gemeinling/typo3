@@ -125,6 +125,14 @@ class SlugHelper
         // Get rid of all invalid characters, but allow slashes
         $slug = (string)preg_replace('/[^\p{L}\p{M}0-9\/' . preg_quote($fallbackCharacter) . ']/u', '', $slug);
 
+        /**
+         * TYPO3 Core HACK Bakehouse Werner Manuel Michael
+         * @see https://git.bakehouse.at/cookis/typo3_bakehouse/issues/45
+         */
+        if ($this->configuration['bhReplaceSlash']) {
+            $slug = str_replace('/', $fallbackCharacter, $slug);
+        }
+
         // Convert multiple fallback characters to a single one
         if ($fallbackCharacter !== '') {
             $slug = (string)preg_replace('/' . preg_quote($fallbackCharacter) . '{2,}/', $fallbackCharacter, $slug);
